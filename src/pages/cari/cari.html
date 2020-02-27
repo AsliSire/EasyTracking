@@ -1,0 +1,24 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <div text-center>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </div>
+  <ion-card *ngFor="let cari of cariliste">
+    <ion-card-header>{{cari.car_adi}}
+    <ion-icon style="float: right; color: #00579c; font-weight: bold; font-size: 2em;" (click)="Siparis(cari.car_adi)" name="arrow-forward"></ion-icon>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-3>
+          <img src="/assets/imgs/plane.svg" class="icon-card"/>
+        </ion-col>
+        <ion-col col-9>
+          <h5>Kod:<b>{{cari.car_kod}}</b></h5>
+          <h5>Bakiye:<b>{{cari.car_bakiye}}</b></h5>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

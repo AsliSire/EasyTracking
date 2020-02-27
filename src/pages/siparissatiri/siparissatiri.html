@@ -1,0 +1,78 @@
+<!--
+  Generated template for the SiparissatiriPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Yeni Sipariş</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="siparissatiri" (ngSubmit)="Kayit()">
+    <ion-grid>
+      <ion-row justify-content-center>
+        <ion-col align-self-center>
+          <div>
+            <ion-item>
+              <ion-label>Stok</ion-label>
+              <ion-input formControlName="sis_stok" type="text" ngModel required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Miktar</ion-label>
+              <ion-input formControlName="sis_miktar" type="text" ngModel required>
+              </ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Birim</ion-label>
+              <ion-input formControlName="sis_birim" type="text" ngModel required>
+              </ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Fiyat</ion-label>
+              <ion-input formControlName="sis_fiyat" type="text" ngModel required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Ara Toplam</ion-label>
+              <ion-input formControlName="sis_ara_toplam" type="text" ngModel required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>İndirim Oranı</ion-label>
+              <ion-input formControlName="sis_indirim_orani" type="text" ngModel required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>İndirim Tutarı</ion-label>
+              <ion-input formControlName="sis_indirim_tutari" type="text" ngModel required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>KDV Oranı</ion-label>
+              <ion-input formControlName="sis_kdv_orani" type="text" ngModel required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>KDV Tutarı</ion-label>
+              <ion-input formControlName="sis_kdv_tutari" type="text" ngModel required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Toplam</ion-label>
+              <ion-input formControlName="sis_toplam" type="text" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div>
+            <button ion-button style="width: 100%; height: 30px;" type="submit" [disabled]="!siparissatiri.valid">Kaydet</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "EasyTracking",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
